@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Jewelry and Loan | Pawn, Buy & Sell in Detroit | As Seen on Hardcore Pawn</title>
+<meta name="description" content="American Jewelry and Loan - a Detroit institution for over 45 years. Pawn, buy and sell fine jewelry, luxury watches, designer handbags and more at 5 Metro Detroit locations. As seen on Hardcore Pawn.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --gold: #C9A227;
+  --gold-light: #E3C766;
+  --gold-dark: #9A7B1A;
+  --black: #111111;
+  --charcoal: #1C1C1C;
+  --dark2: #262626;
+  --cream: #FAF7F0;
+  --warm: #F3EEDF;
+  --text: #2B2B2B;
+  --muted: #6B6B6B;
+}
+body { font-family: 'Source Sans 3', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+a { color: inherit; }
+
+/* Nav */
+.nav { position: sticky; top: 0; z-index: 100; background: var(--black); color: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.25rem; letter-spacing: 0.5px; text-decoration: none; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 22px; flex-wrap: wrap; font-weight: 600; font-size: 0.95rem; }
+.nav-links a { text-decoration: none; opacity: 0.9; }
+.nav-links a:hover { color: var(--gold-light); }
+.nav-phone { background: var(--gold); color: #111; padding: 8px 18px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+.nav-phone:hover { background: var(--gold-light); }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #111 0%, #1C1C1C 55%, #2A2408 100%); color: #fff; }
+.hero-inner { max-width: 1200px; margin: 0 auto; padding: 56px 20px 64px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+.hero-eyebrow { color: var(--gold); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 12px; }
+.hero h1 { font-size: 3rem; line-height: 1.12; margin-bottom: 14px; }
+.hero h1 em { color: var(--gold-light); font-style: normal; }
+.hero p { font-size: 1.12rem; opacity: 0.88; margin-bottom: 22px; max-width: 560px; }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.badge { border: 1px solid rgba(201,162,39,0.7); color: var(--gold-light); padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 13px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+.btn-gold { background: var(--gold); color: #111; }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { border: 2px solid rgba(255,255,255,0.6); color: #fff; }
+.btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+.hero-img { border-radius: 14px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.5); border: 1px solid rgba(201,162,39,0.4); }
+.hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 1/1; }
+.hero-img figcaption { background: #000; color: #ccc; font-size: 0.8rem; text-align: center; padding: 8px; }
+
+/* Sections */
+.section { max-width: 1200px; margin: 0 auto; padding: 56px 20px; }
+.section-dark { background: var(--charcoal); color: #fff; }
+.section-dark .section { color: #fff; }
+.section-title { text-align: center; margin-bottom: 10px; }
+.section-title h2 { font-size: 2.1rem; color: var(--black); }
+.section-dark .section-title h2 { color: #fff; }
+.section-title h2 span { color: var(--gold-dark); }
+.section-dark .section-title h2 span { color: var(--gold-light); }
+.section-sub { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 36px; font-size: 1.05rem; }
+.section-dark .section-sub { color: #bbb; }
+.gold-rule { width: 64px; height: 3px; background: var(--gold); margin: 14px auto 0; border-radius: 2px; }
+
+/* Inventory grid */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.14); }
+.card-img { aspect-ratio: 1/1; overflow: hidden; background: #eee; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-body { padding: 18px 20px 20px; }
+.card-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+.card-body h3 { font-size: 1.15rem; margin-bottom: 6px; line-height: 1.3; }
+.card-body p { color: var(--muted); font-size: 0.93rem; margin-bottom: 10px; }
+.price { font-size: 1.25rem; font-weight: 700; color: var(--black); }
+.price small { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+.shop-note { text-align: center; margin-top: 28px; color: var(--muted); }
+.shop-note a { color: var(--gold-dark); font-weight: 700; }
+
+/* Services */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card { background: var(--dark2); border: 1px solid rgba(201,162,39,0.35); border-radius: 14px; padding: 28px 24px; text-align: center; }
+.service-card .icon { font-size: 2.2rem; margin-bottom: 10px; }
+.service-card h3 { color: var(--gold-light); font-size: 1.4rem; margin-bottom: 10px; letter-spacing: 1px; }
+.service-card p { color: #ccc; font-size: 0.97rem; }
+.service-card ul { list-style: none; margin-top: 14px; text-align: left; }
+.service-card li { color: #ddd; font-size: 0.92rem; padding: 5px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+.service-card li::before { content: "✓ "; color: var(--gold); font-weight: bold; }
+.extras { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px; }
+.extra-pill { background: rgba(201,162,39,0.14); border: 1px solid rgba(201,162,39,0.5); color: var(--gold-light); padding: 8px 18px; border-radius: 50px; font-weight: 600; font-size: 0.92rem; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: center; }
+.about-grid img { width: 100%; border-radius: 14px; box-shadow: 0 8px 28px rgba(0,0,0,0.15); display: block; }
+.about-grid h2 { font-size: 2rem; margin-bottom: 14px; }
+.about-grid h2 span { color: var(--gold-dark); }
+.about-grid p { margin-bottom: 14px; color: #444; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+.stat { text-align: center; background: #fff; border-radius: 12px; padding: 18px 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.06); }
+.stat .num { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 800; color: var(--gold-dark); }
+.stat .lbl { font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+
+/* Reviews */
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+.review .stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 10px; }
+.review p { font-style: italic; color: #444; margin-bottom: 12px; }
+.review .who { font-weight: 700; font-size: 0.92rem; color: var(--gold-dark); }
+
+/* Locations */
+.loc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.loc-card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+.loc-card.flagship { border: 2px solid var(--gold); }
+.loc-card h3 { font-size: 1.25rem; margin-bottom: 4px; }
+.loc-card .flag { display: inline-block; background: var(--gold); color: #111; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; padding: 3px 10px; border-radius: 50px; margin-bottom: 10px; text-transform: uppercase; }
+.loc-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
+.loc-card a { color: var(--gold-dark); font-weight: 700; text-decoration: none; }
+.loc-card a:hover { text-decoration: underline; }
+
+/* Sell form */
+.form-wrap { max-width: 680px; margin: 0 auto; background: #fff; border-radius: 14px; padding: 32px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+.form-wrap label { display: block; font-weight: 700; font-size: 0.92rem; margin-bottom: 6px; }
+.form-wrap input, .form-wrap select, .form-wrap textarea { width: 100%; padding: 12px 14px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; margin-bottom: 16px; }
+.form-wrap textarea { min-height: 100px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-note { font-size: 0.85rem; color: var(--muted); text-align: center; margin-top: 12px; }
+
+/* Visit */
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.visit-box { background: #fff; border-radius: 14px; padding: 28px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+.visit-box h3 { margin-bottom: 12px; }
+.visit-box p { margin-bottom: 8px; color: #444; }
+.visit-box a { color: var(--gold-dark); font-weight: 700; text-decoration: none; }
+.status-pill { display: inline-block; padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 14px; }
+.status-open { background: #e6f4ea; color: #1e7d32; }
+.status-closed { background: #fce8e6; color: #b3261e; }
+.hours-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.hours-table td { padding: 6px 0; border-bottom: 1px solid #eee; }
+.hours-table td:last-child { text-align: right; font-weight: 600; }
+.hours-table tr.today td { color: var(--gold-dark); font-weight: 700; }
+
+/* Footer */
+.footer { background: var(--black); color: #aaa; text-align: center; padding: 36px 20px; font-size: 0.9rem; }
+.footer a { color: var(--gold-light); }
+.footer .disclaimer { max-width: 640px; margin: 12px auto 0; font-size: 0.82rem; color: #777; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .grid, .services-grid, .reviews-grid, .loc-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid, .visit-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .grid, .services-grid, .reviews-grid, .loc-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-links { gap: 12px; font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#">AMERICAN <span>JEWELRY</span> &amp; LOAN</a>
+    <div class="nav-links">
+      <a href="#inventory">Inventory</a>
+      <a href="#services">Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#about">About</a>
+      <a href="#sell">Sell to Us</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="nav-phone" href="tel:+13133454000">(313) 345-4000</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">As Seen on Hardcore Pawn</div>
+      <h1>A Detroit Institution for Over <em>45 Years</em></h1>
+      <p>This is American Jewelry and Loan, where Detroit cashes in. Pawn, buy, and sell fine jewelry, luxury watches, designer handbags, and one-of-a-kind treasures, all at fair market value.</p>
+      <div class="badges">
+        <span class="badge">Est. 1978</span>
+        <span class="badge">5 Metro Detroit Locations</span>
+        <span class="badge">66K on Instagram</span>
+        <span class="badge">250K on Facebook</span>
+        <span class="badge">Family Owned</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#inventory">Shop Featured Items</a>
+        <a class="btn btn-outline" href="#sell">Sell Your Valuables</a>
+      </div>
+    </div>
+    <figure class="hero-img">
+      <img src="images/halloween-store.jpg" alt="Les and Seth Gold in front of the American Jewelry and Loan flagship store">
+      <figcaption>Les and Seth Gold at the flagship store on Greenfield Road</figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- INVENTORY -->
+<section class="section" id="inventory">
+  <div class="section-title">
+    <h2>Featured <span>Inventory</span></h2>
+    <div class="gold-rule"></div>
+  </div>
+  <p class="section-sub">A visit to American Jewelry and Loan can feel like a treasure hunt. Here is a taste of what is on the floor right now, including GIA certified diamonds, luxury timepieces, and designer goods.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img"><img src="images/watches.jpg" alt="Luxury watches at American Jewelry and Loan" loading="lazy"></div>
+      <div class="card-body">
+        <span class="card-tag">Luxury Watches</span>
+        <h3>Rolex Sky-Dweller</h3>
+        <p>A watch made for those who move with purpose. Verified authentic, serviced, and ready to wear.</p>
+        <div class="price">$18,500</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="images/custom-diamond.jpg" alt="Custom diamond jewelry" loading="lazy"></div>
+      <div class="card-body">
+        <span class="card-tag">Fine Jewelry</span>
+        <h3>Custom Diamond Ring, 1.50 ct</h3>
+        <p>Your vision, your diamond, your one-of-a-kind piece. Natural and lab-grown diamonds available.</p>
+        <div class="price">$4,995</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="images/sapphire.jpg" alt="Sapphire jewelry" loading="lazy"></div>
+      <div class="card-body">
+        <span class="card-tag">Gemstones</span>
+        <h3>Sapphire Tennis Bracelet</h3>
+        <p>Rich blue sapphires, treasured for centuries, set in 14K white gold.</p>
+        <div class="price">$1,895</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="images/gold-coins.jpg" alt="Gold coins and bullion" loading="lazy"></div>
+      <div class="card-body">
+        <span class="card-tag">Gold &amp; Coins</span>
+        <h3>American Gold Eagle Coins</h3>
+        <p>Investment-grade gold coins and bullion. We buy and sell at fair market value, every day.</p>
+        <div class="price">$2,750 <small>per coin</small></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="images/peridot.jpg" alt="Peridot pendant" loading="lazy"></div>
+      <div class="card-body">
+        <span class="card-tag">Birthstones</span>
+        <h3>Peridot Pendant, 14K Gold</h3>
+        <p>Known for its vibrant green glow, peridot has long been associated with strength and renewal.</p>
+        <div class="price">$349</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img"><img src="images/treasure-hunt.jpg" alt="Designer handbags and treasures" loading="lazy"></div>
+      <div class="card-body">
+        <span class="card-tag">Designer Goods</span>
+        <h3>Louis Vuitton Neverfull MM</h3>
+        <p>Authenticated pre-loved luxury handbags at a fraction of retail. New arrivals weekly.</p>
+        <div class="price">$1,450</div>
+      </div>
+    </div>
+  </div>
+  <p class="shop-note">New items arrive every day. <a href="https://www.ebay.com/str/pawndetroit" target="_blank" rel="noopener">Shop our eBay store →</a> or visit any location to see the full floor.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="section-dark" id="services">
+  <div class="section">
+    <div class="section-title">
+      <h2>Pawn. Buy. <span>Sell.</span></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <p class="section-sub">Three ways to work with us, all backed by 45 years of fair dealing and the Gold family name.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">💰</div>
+        <h3>PAWN</h3>
+        <p>Short-term collateral loans when you need cash fast, with no credit check and no questions about why.</p>
+        <ul>
+          <li>90-day cash loans</li>
+          <li>Loans on jewelry, electronics, tools &amp; more</li>
+          <li>0% interest loan referral program</li>
+          <li>Confidential, respectful service</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">🛍️</div>
+        <h3>BUY</h3>
+        <p>Purchase one-of-a-kind items at a fraction of retail price, all verified for authenticity by our experts.</p>
+        <ul>
+          <li>GIA certified diamond jewelry</li>
+          <li>Luxury watches &amp; timepieces</li>
+          <li>Designer handbags &amp; fine jewelry</li>
+          <li>Electronics, tools &amp; equipment</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">🤝</div>
+        <h3>SELL</h3>
+        <p>Sell your valuables to our professionals for fair market value, paid on the spot.</p>
+        <ul>
+          <li>Top prices paid for gold, platinum &amp; silver</li>
+          <li>Diamonds, watches &amp; coins</li>
+          <li>Broken chains &amp; unwanted jewelry welcome</li>
+          <li>Free, no-pressure appraisals</li>
+        </ul>
+      </div>
+    </div>
+    <div class="extras">
+      <span class="extra-pill">Layaway Program</span>
+      <span class="extra-pill">Custom Jewelry Design</span>
+      <span class="extra-pill">Jewelry Repair &amp; Cleaning</span>
+      <span class="extra-pill">Lab-Grown Diamonds</span>
+      <span class="extra-pill">Engagement Rings</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="about-grid">
+    <div>
+      <img src="images/community.jpg" alt="The American Jewelry and Loan team with customers" loading="lazy">
+    </div>
+    <div>
+      <h2>For us, it has always been about <span>the people</span> who walk through our doors.</h2>
+      <p>American Jewelry and Loan opened in 1978 and has become one of the largest and most recognizable pawn shops in the world. The flagship Detroit location on Greenfield Road was the setting for the record-breaking reality show <strong>Hardcore Pawn</strong>, starring owners Les Gold and his son Seth.</p>
+      <p>Les is a third-generation pawnbroker. For nearly five decades, the Gold family has served Metro Detroit with the same promise: fair prices, honest appraisals, and respect for every person who walks in, whether they are pawning a watch, selling grandmother's ring, or hunting for a once-in-a-lifetime find.</p>
+      <p>Today, with five locations across Metro Detroit, the family tradition continues, and the stories our customers share are still the best part of the job.</p>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="num">1978</div><div class="lbl">Founded</div></div>
+    <div class="stat"><div class="num">5</div><div class="lbl">Metro Detroit Locations</div></div>
+    <div class="stat"><div class="num">66K</div><div class="lbl">Instagram Followers</div></div>
+    <div class="stat"><div class="num">250K</div><div class="lbl">Facebook Followers</div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" style="padding-top: 0;">
+  <div class="section-title">
+    <h2>What Detroit <span>Says</span></h2>
+    <div class="gold-rule"></div>
+  </div>
+  <p class="section-sub">Real words from real customers.</p>
+  <div class="reviews-grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"American Jewelry is da bomb! Michael took care of me, gave me professional service and cleaned my jewelry for me."</p>
+      <div class="who">— Google Review</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Tiffany was very polite and had a lot of positive energy. She made the whole visit easy."</p>
+      <div class="who">— Google Review</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"She was lovely and very helpful. I had a circumstance and she helped address the issue and we resolved it."</p>
+      <div class="who">— Google Review</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="section" id="locations" style="padding-top: 0;">
+  <div class="section-title">
+    <h2>Five Floors. <span>One Family.</span></h2>
+    <div class="gold-rule"></div>
+  </div>
+  <p class="section-sub">Pawn, sell, or buy unique items at any of our Hardcore Pawn shop locations across Metro Detroit.</p>
+  <div class="loc-grid">
+    <div class="loc-card flagship">
+      <span class="flag">Flagship · As Seen on TV</span>
+      <h3>Detroit</h3>
+      <p>20450 Greenfield Rd<br>Detroit, MI 48235</p>
+      <p><a href="tel:+13133454000">(313) 345-4000</a></p>
+      <p>Mon–Sat: 9:30 AM – 6:00 PM<br>Closed Sunday</p>
+      <p><a href="https://maps.google.com/?q=20450+Greenfield+Rd,+Detroit,+MI+48235" target="_blank" rel="noopener">Get Directions →</a></p>
+    </div>
+    <div class="loc-card">
+      <h3>Hazel Park</h3>
+      <p>20804 John R Rd<br>Hazel Park, MI 48030</p>
+      <p><a href="tel:+12483984653">(248) 398-4653</a></p>
+      <p>Mon–Sat: 9:30 AM – 6:00 PM<br>Closed Sunday</p>
+      <p><a href="https://maps.google.com/?q=20804+John+R+Rd,+Hazel+Park,+MI+48030" target="_blank" rel="noopener">Get Directions →</a></p>
+    </div>
+    <div class="loc-card">
+      <h3>Pontiac</h3>
+      <p>546 N Telegraph Rd<br>Pontiac, MI 48341</p>
+      <p><a href="tel:+12484095626">(248) 409-5626</a></p>
+      <p>Mon–Sat: 9:30 AM – 6:00 PM<br>Closed Sunday</p>
+      <p><a href="https://maps.google.com/?q=546+N+Telegraph+Rd,+Pontiac,+MI+48341" target="_blank" rel="noopener">Get Directions →</a></p>
+    </div>
+    <div class="loc-card">
+      <h3>Southgate</h3>
+      <p>14336 Eureka Rd<br>Southgate, MI 48195</p>
+      <p><a href="tel:+17342256811">(734) 225-6811</a></p>
+      <p>Mon–Sat: 9:30 AM – 6:00 PM<br>Closed Sunday</p>
+      <p><a href="https://maps.google.com/?q=14336+Eureka+Rd,+Southgate,+MI+48195" target="_blank" rel="noopener">Get Directions →</a></p>
+    </div>
+    <div class="loc-card">
+      <h3>Lincoln Park</h3>
+      <p>1456 Fort St<br>Lincoln Park, MI 48146</p>
+      <p><a href="tel:+13134380882">(313) 438-0882</a></p>
+      <p>Mon–Sat: 9:30 AM – 6:00 PM<br>Closed Sunday</p>
+      <p><a href="https://maps.google.com/?q=1456+Fort+St,+Lincoln+Park,+MI+48146" target="_blank" rel="noopener">Get Directions →</a></p>
+    </div>
+    <div class="loc-card" style="background: var(--charcoal); color: #fff;">
+      <h3 style="color: var(--gold-light);">Shop Online</h3>
+      <p style="color: #ccc;">Can't make it to a store? Browse authenticated pre-loved treasures from anywhere.</p>
+      <p><a href="https://www.ebay.com/str/pawndetroit" target="_blank" rel="noopener" style="color: var(--gold-light);">eBay Store →</a></p>
+      <p><a href="https://pawndetroit.com/shop/" target="_blank" rel="noopener" style="color: var(--gold-light);">Pawn Detroit Shop →</a></p>
+      <p style="color: #ccc; margin-top: 12px;">Follow us:<br><a href="https://www.instagram.com/americanjewelry/" target="_blank" rel="noopener" style="color: var(--gold-light);">@americanjewelry on Instagram</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- SELL TO US -->
+<section class="section" id="sell" style="padding-top: 0;">
+  <div class="section-title">
+    <h2>Sell <span>to Us</span></h2>
+    <div class="gold-rule"></div>
+  </div>
+  <p class="section-sub">Holding onto gold jewelry, broken chains, rings, or coins? Tell us what you have and we will give you a free, no-pressure appraisal.</p>
+  <div class="form-wrap">
+    <form onsubmit="event.preventDefault(); document.getElementById('form-msg').style.display='block'; this.reset();">
+      <div class="form-row">
+        <div>
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="Jane Smith" required>
+        </div>
+        <div>
+          <label for="phone">Phone or Email</label>
+          <input id="phone" type="text" placeholder="(313) 555-0100" required>
+        </div>
+      </div>
+      <label for="item-type">What are you selling?</label>
+      <select id="item-type" required>
+        <option value="">Choose a category</option>
+        <option>Gold / Silver / Platinum</option>
+        <option>Diamond Jewelry</option>
+        <option>Luxury Watch</option>
+        <option>Designer Handbag</option>
+        <option>Coins &amp; Bullion</option>
+        <option>Electronics</option>
+        <option>Tools &amp; Equipment</option>
+        <option>Something Else</option>
+      </select>
+      <label for="desc">Tell us about your item</label>
+      <textarea id="desc" placeholder="Example: 14K gold rope chain, about 22 inches, purchased in 2019..."></textarea>
+      <label for="loc">Preferred Location</label>
+      <select id="loc">
+        <option>Detroit (Flagship)</option>
+        <option>Hazel Park</option>
+        <option>Pontiac</option>
+        <option>Southgate</option>
+        <option>Lincoln Park</option>
+      </select>
+      <button type="submit" class="btn btn-gold" style="width: 100%; border: none; cursor: pointer;">Request My Free Appraisal</button>
+      <p id="form-msg" style="display: none; text-align: center; margin-top: 14px; color: #1e7d32; font-weight: 700;">Thanks! We will be in touch shortly about your item.</p>
+      <p class="form-note">No obligation. Your information stays private and is never shared.</p>
+    </form>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section" id="visit" style="padding-top: 0;">
+  <div class="section-title">
+    <h2>Visit the <span>Flagship</span></h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="visit-grid">
+    <div class="visit-box">
+      <span id="open-status" class="status-pill status-open">Open Now</span>
+      <h3>American Jewelry and Loan — Detroit</h3>
+      <p>20450 Greenfield Rd<br>Detroit, MI 48235</p>
+      <p>Phone: <a href="tel:+13133454000">(313) 345-4000</a></p>
+      <p>Email: <a href="mailto:info@pawndetroit.com">info@pawndetroit.com</a></p>
+      <p><a href="https://maps.google.com/?q=20450+Greenfield+Rd,+Detroit,+MI+48235" target="_blank" rel="noopener">Get Directions →</a></p>
+      <p style="margin-top: 14px;"><a href="https://www.instagram.com/americanjewelry/" target="_blank" rel="noopener">@americanjewelry</a> · 66K followers</p>
+    </div>
+    <div class="visit-box">
+      <h3>Hours</h3>
+      <table class="hours-table" id="hours-table">
+        <tr data-day="1"><td>Monday</td><td>9:30 AM – 6:00 PM</td></tr>
+        <tr data-day="2"><td>Tuesday</td><td>9:30 AM – 6:00 PM</td></tr>
+        <tr data-day="3"><td>Wednesday</td><td>9:30 AM – 6:00 PM</td></tr>
+        <tr data-day="4"><td>Thursday</td><td>9:30 AM – 6:00 PM</td></tr>
+        <tr data-day="5"><td>Friday</td><td>9:30 AM – 6:00 PM</td></tr>
+        <tr data-day="6"><td>Saturday</td><td>9:30 AM – 6:00 PM</td></tr>
+        <tr data-day="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p><strong style="color:#fff;">AMERICAN JEWELRY &amp; LOAN</strong> · Where Detroit Cashes In · As Seen on Hardcore Pawn</p>
+  <p style="margin-top:8px;">20450 Greenfield Rd, Detroit, MI 48235 · <a href="tel:+13133454000">(313) 345-4000</a> · <a href="mailto:info@pawndetroit.com">info@pawndetroit.com</a></p>
+  <p class="disclaimer">Demo redesign by Lexis Sapphire Studio. This is a concept website created to demonstrate a modern redesign. Not affiliated with American Jewelry and Loan. Photos from @americanjewelry on Instagram. Featured inventory items and prices are representative examples for demonstration purposes.</p>
+</footer>
+
+<script>
+// Live open/closed status: Mon-Sat 9:30 AM - 6:00 PM, closed Sunday (America/Detroit)
+(function () {
+  var now = new Date();
+  var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Detroit', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(now);
+  var get = function (t) { var p = parts.find(function (x) { return x.type === t; }); return p ? p.value : ''; };
+  var dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  var day = dayMap[get('weekday')];
+  var mins = parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10);
+  var open = day !== 0 && mins >= 570 && mins < 1080; // 9:30 AM = 570, 6:00 PM = 1080
+  var pill = document.getElementById('open-status');
+  if (open) {
+    pill.textContent = 'Open Now · Closes 6:00 PM';
+    pill.className = 'status-pill status-open';
+  } else {
+    pill.textContent = day === 0 ? 'Closed Today (Sunday)' : 'Closed · Opens 9:30 AM';
+    pill.className = 'status-pill status-closed';
+  }
+  var row = document.querySelector('#hours-table tr[data-day="' + day + '"]');
+  if (row) row.classList.add('today');
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Jewelry and Loan - Website Redesign | Before &amp; After</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Source Sans 3', sans-serif; background: #f5f5f5; color: #333; }
+.header { background: #111; color: white; text-align: center; padding: 40px 20px; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 8px; }
+.header h1 span { color: #C9A227; }
+.header p { opacity: 0.85; font-size: 1.1rem; }
+.container { max-width: 1400px; margin: 0 auto; padding: 30px 20px; }
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.panel { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+.panel-header { padding: 16px 20px; font-weight: 700; font-size: 1.1rem; text-align: center; }
+.before-header { background: #e0e0e0; color: #666; }
+.after-header { background: #111; color: #C9A227; }
+.panel-body { padding: 24px; }
+.before-site { font-family: Arial, Helvetica, sans-serif; text-align: center; }
+.before-site h2 { font-size: 1.4rem; margin-bottom: 10px; }
+.before-site p { margin-bottom: 10px; line-height: 1.5; color: #444; }
+.before-boxes { display: flex; gap: 12px; justify-content: center; margin: 18px 0; }
+.before-box { border: 1px solid #ccc; border-radius: 6px; padding: 16px 10px; flex: 1; max-width: 120px; }
+.before-box strong { display: block; font-size: 1rem; margin-bottom: 4px; }
+.before-box span { font-size: 0.8rem; color: #666; }
+
+/* Browser window frame for iframe */
+.browser-frame { border: 1px solid #ddd; border-radius: 8px 8px 0 0; overflow: hidden; background: #f0f0f0; }
+.browser-bar { background: #e8e8e8; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #ddd; }
+.browser-dot { width: 12px; height: 12px; border-radius: 50%; }
+.browser-dot.red { background: #ff5f57; }
+.browser-dot.yellow { background: #febc2e; }
+.browser-dot.green { background: #28c840; }
+.browser-url { flex: 1; background: white; border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; font-size: 0.8rem; color: #666; margin-left: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.live-preview-label { text-align: center; padding: 10px; background: #FAF7F0; font-size: 0.9rem; color: #9A7B1A; font-weight: 600; border-bottom: 1px solid #ddd; }
+.demo-iframe { width: 100%; height: 800px; border: none; display: block; background: white; }
+.btn { display: inline-block; background: #C9A227; color: #111; padding: 12px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; margin-top: 16px; }
+.btn:hover { background: #E3C766; }
+.btn-wrap { text-align: center; padding: 20px; }
+
+/* Lists section below panels */
+.lists-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.list-panel { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+.list-panel h3 { font-size: 1.1rem; margin-bottom: 16px; }
+.missing-list, .included-list { list-style: none; }
+.missing-list li, .included-list li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+.missing-list li:last-child, .included-list li:last-child { border-bottom: none; }
+.missing-list li::before { content: "✗ "; color: #c0392b; font-weight: bold; }
+.included-list li::before { content: "✓ "; color: #9A7B1A; font-weight: bold; }
+
+.footer { text-align: center; padding: 30px 20px; color: #888; font-size: 0.9rem; }
+@media (max-width: 900px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .lists-grid { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.6rem; }
+  .demo-iframe { height: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>American Jewelry and Loan <span>— Website Redesign</span></h1>
+  <p>45 years on TV deserves a website that shows it</p>
+</div>
+
+<div class="container">
+  <div class="compare-grid">
+    <!-- BEFORE -->
+    <div class="panel">
+      <div class="panel-header before-header">BEFORE — Current Website</div>
+      <div class="panel-body">
+        <div class="before-site">
+          <h2>American Jewelry and Loan</h2>
+          <p><strong>A Detroit institution for over 45 years.</strong></p>
+          <p>This is American Jewelry and Loan, where Detroit cashes in.</p>
+          <p>You have seen Les and Seth and all the hardcore deals on TV, now it is your turn to be all about that pawn life.</p>
+          <p><strong>Today is your payday.</strong></p>
+          <div class="before-boxes">
+            <div class="before-box"><strong>PAWN</strong><span>Collateral loans on jewelry, electronics, tools, and more.</span></div>
+            <div class="before-box"><strong>BUY</strong><span>Purchase items at a fraction of the retail price.</span></div>
+            <div class="before-box"><strong>SELL</strong><span>Sell your valuables for fair market value.</span></div>
+          </div>
+          <p>313-345-4000<br>Mon - Sat: 9:30am - 6:00pm, Closed Sunday</p>
+          <p style="margin-top:16px;"><a href="https://pawndetroit.com/" target="_blank">Visit current site →</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AFTER - Live iframe -->
+    <div class="panel">
+      <div class="panel-header after-header">AFTER — New Design</div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+          <span class="browser-url">rishaofficial.github.io/american-jewelry-demo</span>
+        </div>
+        <div class="live-preview-label">Live Preview — Scroll to explore ↓</div>
+        <iframe src="https://rishaofficial.github.io/american-jewelry-demo/" class="demo-iframe" title="American Jewelry and Loan Demo Website"></iframe>
+      </div>
+      <div class="btn-wrap">
+        <a href="https://rishaofficial.github.io/american-jewelry-demo/" class="btn" target="_blank">View Full Demo →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lists below panels -->
+  <div class="lists-grid">
+    <div class="list-panel">
+      <h3>What's Missing (Current Site)</h3>
+      <ul class="missing-list">
+        <li>No inventory or product showcase</li>
+        <li>No prices anywhere</li>
+        <li>No photos of actual items for sale</li>
+        <li>No pages for the 5 locations</li>
+        <li>No online appraisal or sell-to-us form</li>
+        <li>No Hardcore Pawn story or Gold family history</li>
+        <li>No reviews or testimonials</li>
+        <li>No layaway, repair, or custom jewelry info</li>
+        <li>Images from November 2020, not updated in 6 years</li>
+        <li>No eBay store link on the homepage</li>
+        <li>No email signup that works</li>
+        <li>Two domains (pawndetroit.com + americanjewelryonline.com) showing the same thin page</li>
+      </ul>
+    </div>
+    <div class="list-panel">
+      <h3>What's Included (New Design)</h3>
+      <ul class="included-list">
+        <li>Featured inventory with photos and prices</li>
+        <li>Expanded PAWN / BUY / SELL service details</li>
+        <li>All 5 locations with addresses, phones &amp; maps</li>
+        <li>Sell-to-us inquiry form with free appraisal offer</li>
+        <li>Gold family story and Hardcore Pawn history</li>
+        <li>Customer reviews and testimonials</li>
+        <li>Layaway, custom jewelry &amp; repair highlights</li>
+        <li>Live open/closed status and hours</li>
+        <li>Tap-to-call phone numbers</li>
+        <li>eBay store and Instagram links</li>
+        <li>Mobile-friendly responsive design</li>
+        <li>Luxury gold-and-black design worthy of the brand</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Demo redesign by Lexis Sapphire Studio · <a href="https://rishaofficial.github.io/lexis-sapphire-studio/" target="_blank">lexis-sapphire-studio</a></p>
+  <p>This is a concept website created to demonstrate a modern redesign. Not affiliated with American Jewelry and Loan.</p>
+</div>
+
+</body>
+</html>
